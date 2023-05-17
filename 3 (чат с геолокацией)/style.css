@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.window {
+    background-image: linear-gradient(to top, rgb(5, 12, 93), rgb(8, 117, 160), rgb(110, 211, 42));;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 20% 60% 20%;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.chat-main {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    background: linear-gradient(to bottom, rgb(1, 46, 76), rgb(0, 0, 0));;
+    padding: 1em 0.5em 0 0.5em;
+
+    border-style: none;
+    border-radius: 20px;
+    display: grid;
+    grid-template-rows: 20fr 1fr;
+}
+
+.chat-messages {
+    display: grid;
+    align-content: flex-start;
+    overflow: auto;
+}
+
+/* полоса прокрутки */
+.chat-messages::-webkit-scrollbar {
+    width: 5px;
+}
+.chat-messages::-webkit-scrollbar-track {
+    background: rgb(110, 211, 42);        /* цвет зоны отслеживания */
+}
+.chat-messages::-webkit-scrollbar-thumb {
+    background-color: rgb(5, 44, 116);    /* цвет бегунка */
+}
+
+.msg {
+    display: block;
+    height: auto;
+    border: 1px solid;
+    border-radius: 10px;
+    margin: 5px 0;
+    padding: 4px 1em;
+    max-width: 44%;
+    letter-spacing: 1.2px;
+    color: #fffffe;
+    word-break: break-all;
+}
+
+.user-msg{
+    border-color: #6ed32a;
+    justify-self: flex-end;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.server-msg {
+    border-color:#e1e44a;
+    justify-self: flex-start;
+    margin-left: 10px;
+}
+
+.server-msg a {
+    color:#e1e44a;
+}
+.server-msg a:hover {
+    color:#4ae478;
+}
+
+.input-block {
+    width: 100%;
+    padding: 1em 0 2px 0;
+    display: grid;
+    grid-template-columns: 59% 40%;
+    grid-gap: 5px;
+}
+
+.text-input {
+    border-radius: 20px;
+    padding: 4px 1em;
+    margin: 2px;
+    letter-spacing: 1px;
+}
+
+.btn-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.btn {
+    border-radius: 20px;
+    padding: 4px 6px;
+    margin-top: 1px;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: #e1e44a;
+}
